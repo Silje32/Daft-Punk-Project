@@ -26,4 +26,21 @@ for (let key in soundMap) {
   const textElement = document.createElement("p");
   textElement.textContent = `${key}: ${soundMap[key]}`;
   drumElement.append(textElement);
+
+  drumElement.addEventListener("click", () => {
+    playSound(soundMap[key]);
+  });
 }
+
+const playSound = (sound) => {
+  const audio = new Audio(`./sounds/${sound}.wav`);
+  audio.play();
+};
+
+document.addEventListener("keydown", (e) => {
+  const key = e.key;
+  const sound = soundMap[key];
+  if (sound) {
+    playSound(sound);
+  }
+});
