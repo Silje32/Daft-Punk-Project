@@ -1,6 +1,7 @@
 h1 {
   color: lightseagreen;
   text-align: center;
+  font-family: fantasy;
 }
 body {
   background-color: black;
@@ -15,4 +16,14 @@ body {
 .logo {
   width: 50%;
   height: 50%;
+}
+.drum-container {
+  display: flex;
+  justify-content: center;
+}
+p {
+  background-color: red;
+  padding: 10px;
+  margin-left: 10px;
+  font-family: Garamond;
 }
