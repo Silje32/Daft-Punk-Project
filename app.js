@@ -18,3 +18,12 @@ const soundMap = {
 };
 
 const drumContainer = document.querySelector("#drum-container");
+for (let key in soundMap) {
+  const drumElement = document.createElement("div");
+  drumElement.classList.add("soundButton");
+  drumContainer.append(drumElement);
+
+  const textElement = document.createElement("p");
+  textElement.textContent = `${key}: ${soundMap[key]}`;
+  drumElement.append(textElement);
+}
